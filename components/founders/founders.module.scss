@@ -1,0 +1,44 @@
+@use '../../styles/variables' as *;
+
+.section {
+  @include container;
+  @include section-pad;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+
+  @media (min-width: $bp-lg) {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 4rem;
+  }
+}
+
+.portrait {
+  border: 1px solid $border-subtle;
+  border-radius: $radius;
+  overflow: hidden;
+  background: $bg-secondary;
+
+  img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(1) contrast(1.05);
+  }
+}
+
+.header {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  max-width: 20ch;
+}
+
+.body {
+  margin-top: 1.75rem;
+  color: $text-muted;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.7;
+  max-width: 60ch;
+}

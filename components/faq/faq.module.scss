@@ -1,0 +1,88 @@
+@use '../../styles/variables' as *;
+
+.section {
+  @include container;
+  @include section-pad;
+  max-width: $container-narrow;
+}
+
+.header {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  text-align: center;
+}
+
+.list {
+  margin-top: 3rem;
+  border-top: 1px solid $border-subtle;
+}
+
+.item {
+  border-bottom: 1px solid $border-subtle;
+}
+
+.trigger {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: $text-primary;
+  text-align: left;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-weight: 600;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $accent-green;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background: $accent-green;
+    transition: transform 0.3s ease;
+  }
+
+  &::before {
+    top: 9px;
+    left: 0;
+    width: 20px;
+    height: 2px;
+  }
+
+  &::after {
+    top: 0;
+    left: 9px;
+    width: 2px;
+    height: 20px;
+  }
+
+  &.open::after {
+    transform: scaleY(0);
+  }
+}
+
+.panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+
+.answer {
+  color: $text-muted;
+  font-size: 1rem;
+  line-height: 1.7;
+  padding-bottom: 1.5rem;
+  max-width: 68ch;
+}

@@ -1,0 +1,86 @@
+@use '../../styles/variables' as *;
+
+.section {
+  @include container;
+  @include section-pad;
+  text-align: center;
+}
+
+.header {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
+.subhead {
+  margin-top: 1.25rem;
+  color: $text-muted;
+  max-width: 56ch;
+  margin-inline: auto;
+  font-size: 1.05rem;
+}
+
+.invoice {
+  margin-top: 3rem;
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: left;
+  background: $bg-secondary;
+  border: 1px solid $border-strong;
+  border-radius: $radius;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  font-family: $font-mono;
+}
+
+.invoiceHead {
+  border-bottom: 1px dashed $border-strong;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $text-dim;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px dashed $border-subtle;
+  font-size: 0.9rem;
+}
+
+.lineDesc {
+  color: $text-muted;
+}
+
+.lineAmount {
+  color: $text-primary;
+  white-space: nowrap;
+}
+
+.total {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed $border-strong;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.totalLabel {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $text-primary;
+}
+
+.totalAmount {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: $accent-green;
+}

@@ -1,0 +1,111 @@
+@use '../../styles/variables' as *;
+
+.section {
+  @include container;
+  @include section-pad;
+}
+
+.header {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  max-width: 24ch;
+}
+
+.axis {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+
+  @media (max-width: $bp-md) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+.node {
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: $text-dim;
+  transition: color 0.3s ease;
+
+  &.active {
+    color: $text-primary;
+  }
+}
+
+.progress {
+  height: 3px;
+  width: 100%;
+  background: $bg-tertiary;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, $accent-cyan, $accent-green);
+  border-radius: 2px;
+
+  &.filling {
+    animation: fill 4s linear forwards;
+  }
+
+  &.done {
+    width: 100%;
+  }
+}
+
+@keyframes fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.step {
+  font-family: $font-mono;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nodeTitle {
+  margin-top: 0.4rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.detailCard {
+  margin-top: 2.5rem;
+  background: $bg-secondary;
+  border: 1px solid $border-subtle;
+  border-radius: $radius;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.detailWeeks {
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  color: $accent-green;
+  letter-spacing: 0.05em;
+}
+
+.detailTitle {
+  margin-top: 0.6rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.detailText {
+  margin-top: 0.85rem;
+  color: $text-muted;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  max-width: 68ch;
+}
