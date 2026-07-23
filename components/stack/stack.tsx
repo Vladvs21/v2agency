@@ -57,7 +57,7 @@ export function Stack() {
   return (
     <section className={styles.section}>
       <h2 className={styles.header}>
-        The Complete Performance Stack. Bonuses Included for <span>over $13.000</span>
+        The Complete Performance Stack. <span>Over $13,000</span> in Included Bonuses
       </h2>
 
       <div className={styles.grid}>
