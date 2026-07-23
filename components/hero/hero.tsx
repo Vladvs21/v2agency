@@ -28,13 +28,11 @@ export function Hero() {
         </span>
 
         <h1 className={styles.headline}>
-          High-converting online store for your Black Friday &amp; Cyber Monday rush
+          High-converting online store for your Black Friday - Christmas rush
         </h1>
 
         <p className={styles.subhead}>
-          We design your elite
-          infrastructure, launch your targeted traffic acquisition and handle
-          100% of your development support through the peak shopping season
+          Claim Your Share of the $250B+ Holiday Shopping Surge. We build high-converting UI, drive targeted acquisition and handle 100% of support
         </p>
 
         <CTA />

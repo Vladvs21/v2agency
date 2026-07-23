@@ -43,11 +43,11 @@ export function MathSection() {
     <section className={styles.section}>
       <h2 className={styles.header}>
         The Cost of a Sluggish Store: How Minor Performance Flaws Bleed Cash on
-        Black Friday
+        Peak Shopping Season
       </h2>
       <p className={styles.subhead}>
         If your traffic volume is dialed in to hit a baseline of $100,000 over
-        the holiday weekend, here is how each infrastructure layer acts as a
+        the holidays, here is how each infrastructure layer acts as a
         direct percentage of your revenue and how elite engineering increases
         that yield
       </p>

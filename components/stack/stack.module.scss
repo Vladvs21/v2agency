@@ -7,7 +7,12 @@
 
 .header {
   font-size: clamp(1.75rem, 3.5vw, 2.75rem);
-  max-width: 22ch;
+  max-width: 27ch;
+  line-height: 1.2;
+  
+  span {
+    color: $accent-green;
+  }
 }
 
 .grid {
@@ -80,6 +85,7 @@
   margin-top: 0.75rem;
   font-size: 1.2rem;
   font-weight: 600;
+  line-height: 1.4;
 }
 
 .desc {
