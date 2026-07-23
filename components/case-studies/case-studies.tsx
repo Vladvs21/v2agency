@@ -6,10 +6,10 @@ import styles from './case-studies.module.scss'
 import CTA from '../hero/cta'
 
 const gallery = [
-  { src: '/case-gallery-1.png', alt: 'Headless Next.js catalog page holding 0.9s load time under peak traffic' },
-  { src: '/case-gallery-2.png', alt: 'Custom internal CRM dashboard tracking client lifecycles' },
-  { src: '/case-gallery-3.png', alt: 'Mobile express checkout flow with high-conversion pay button' },
-  { src: '/case-gallery-4.png', alt: 'Serverless infrastructure monitoring at 100% uptime' },
+  { src: '/case-gallery-1.webp', alt: 'Headless Next.js catalog page holding 0.9s load time under peak traffic' },
+  { src: '/case-gallery-2.webp', alt: 'Custom internal CRM dashboard tracking client lifecycles' },
+  { src: '/case-gallery-3.webp', alt: 'Mobile express checkout flow with high-conversion pay button' },
+  { src: '/case-gallery-4.webp', alt: 'Serverless infrastructure monitoring at 100% uptime' },
 ]
 
 const clients = [
@@ -40,7 +40,7 @@ export function CaseStudies() {
         <div className={styles.galleryCol}>
           <div className={styles.mainImage}>
             <Image
-              src={gallery[active].src || "/placeholder.svg"}
+              src={gallery[active].src}
               alt={gallery[active].alt}
               fill
               sizes="(max-width: 768px) 100vw, 45vw"
@@ -77,7 +77,7 @@ export function CaseStudies() {
                   aria-label={`Show image ${g.i + 1}`}
                 >
                   <Image
-                    src={g.src || "/placeholder.svg"}
+                    src={g.src}
                     alt=""
                     fill
                     sizes="120px"

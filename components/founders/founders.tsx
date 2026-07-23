@@ -7,7 +7,7 @@ export function Founders() {
       <div className={styles.grid}>
         <div className={styles.portrait}>
           <Image
-            src="/team-portrait-new.jpg"
+            src="/team-portrait-new.webp"
             alt="Senior software engineering team studio portrait"
             width={600}
             height={720}

@@ -8,17 +8,17 @@ export function Hero() {
     <div className={styles.hero_container}>
       <section className={styles.hero}>
         <div className={styles.screen_wrapper_left_1}>
-          <img src="screen-2.png" alt="CRM Panel" />
+          <img src="screen-2.webp" alt="CRM Panel" />
         </div>
         <div className={styles.screen_wrapper_left_2}>
-          <img src="screen-1.png" alt="CRM Panel" />
+          <img src="screen-1.webp" alt="CRM Panel" />
         </div>
 
         <div className={styles.screen_wrapper_right_1}>
-          <img src="screen-3.png" alt="CRM Panel" />
+          <img src="screen-3.webp" alt="CRM Panel" />
         </div>
         <div className={styles.screen_wrapper_right_2}>
-          <img src="screen-4.png" alt="CRM Panel" />
+          <img src="screen-4.webp" alt="CRM Panel" />
         </div>
         
         <Logo />
