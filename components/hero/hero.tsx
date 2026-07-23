@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from './hero.module.scss'
 import CTA from './cta'
+import Logo from './logo'
 
 export function Hero() {
   return (
@@ -19,6 +20,8 @@ export function Hero() {
         <div className={styles.screen_wrapper_right_2}>
           <img src="screen-4.png" alt="CRM Panel" />
         </div>
+        
+        <Logo />
 
         <span className={styles.tag}>
           Exclusive Q3/Q4 Performance Partner Program for US E-Commerce Brands
@@ -40,20 +43,7 @@ export function Hero() {
           ⚡ Strictly limited to 3 brands for the pre-BFCM cycle to guarantee
           dedicated engineering and ad spend focus
         </p>
-
-        {/* <div className={styles.showcase}>
-          <Image
-            src="/showcase-dashboard.png"
-            alt="High-speed checkout flow overlapping the custom CRM dashboard"
-            width={1000}
-            height={640}
-            priority
-          />
-        </div> */}
       </section>
-
-      {/* <div className={styles.screen_wrapper}>
-      </div> */}
     </div>
   )
 }

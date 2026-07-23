@@ -1,0 +1,96 @@
+@use '../../styles/variables' as *;
+
+.thank_container {
+  position: relative;
+  overflow: hidden;
+}
+.thank {
+  min-height: 100vh;
+  @include container;
+  padding-block: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & * {
+    z-index: 2;
+  }
+}
+
+.title {
+  margin-top: 48px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.6;
+
+  span {
+    color: $accent-green;
+  }
+}
+.subtitle {
+  margin-top: 1.25rem;
+  max-width: 60ch;
+  color: $text-muted;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.divider {
+  width: 100%;
+  max-width: 576px;
+  height: 1px;
+  background: rgba(#fff, 0.25);
+  margin: 6rem 0;
+}
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+.steps_title {
+  margin-top: 2rem;
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(#fff, 0.5);
+}
+.step {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+}
+.step_title {
+  height: fit-content;
+  text-align: start;
+  
+  font-size: 16px;
+  font-weight: 400;
+}
+.step_text {
+  height: fit-content;
+  
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 1.6;
+  color: rgba(#fff, 0.5);
+  text-align: justify;
+}
+
+.annotation {
+
+  margin-top: auto;
+  font-family: $font-mono;
+  font-size: 12px;
+  color: $text-dim;
+}
+.hook {
+  margin-bottom: auto;
+}
